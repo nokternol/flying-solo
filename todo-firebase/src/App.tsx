@@ -1,25 +1,28 @@
-import React from 'react';
 import './App.css';
+import { Container } from './components/react-skeleton/container';
+import { Row } from './components/react-skeleton/row';
+import { Column } from "./components/react-skeleton/column";
+import { Section } from './components/section';
 
 function App() {
   return (
-    <div>
-      <div className="section hero">
-        <div className="container">
-          <div className="row">
-            <div className="one-half column">
+    <>
+      <Section className="hero">
+        <Container>
+          <Row>
+            <Column size="one-half">
               <h4 className="hero-heading">Playing with CRU means learning to play the game properly and grow together</h4>
-              <a className="button button-primary">Game Wiki</a>
-            </div>
-            <div className="one-half column phones">
+              <a className="button button-primary" href="www.google.com">Game Wiki</a>
+            </Column>
+            <Column size="one-half" className="phones">
               <img alt="phone" className="phone" src="images/iphone.png" />
               <img alt="phone" className="phone" src="images/iphone.png" />
-            </div>
-          </div>
-        </div>
-      </div>
+            </Column>
+          </Row>
+        </Container>
+      </Section>
 
-      <div className="section values" style={{ backgroundImage: "url(/images/values-bg.jpg)" }}>
+      <Section className="values" style={{ backgroundImage: "url(/images/values-bg.jpg)" }}>
         <div className="container">
           <div className="row">
             <div className="one-third column value">
@@ -39,17 +42,17 @@ function App() {
             </div>
           </div>
         </div>
-      </div>
+      </Section>
 
-      <div className="section get-help">
+      <Section className="get-help">
         <div className="container">
           <h3 className="section-heading">Need help getting started?</h3>
           <p className="section-description">Skeleton is an amazingly easy place to start with responsive development. If you want to learn more, just visit the documentation!</p>
           <a className="button button-primary" href="http://getskeleton.com">View Skeleton Docs</a>
         </div>
-      </div>
+      </Section>
 
-      <div className="section categories" style={{ backgroundImage: "url(/images/values-bg.jpg)" }}>
+      <Section className="categories" style={{ backgroundImage: "url(/images/values-bg.jpg)" }}>
         <div className="container">
           <h3 className="section-heading">Responsive Images</h3>
           <p className="section-description">Skeleton images sit easily in grid with .u-max-full-width className. I suggest exploring solution to serving different images based on device size.</p>
@@ -62,8 +65,8 @@ function App() {
             </div>
           </div>
         </div>
-      </div>
-    </div>
+      </Section>
+    </>
   );
 }
 
